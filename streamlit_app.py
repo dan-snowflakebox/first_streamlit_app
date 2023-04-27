@@ -51,12 +51,14 @@ def get_fruit_load_list():
     my_cur = my_cnx.cursor()
     my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
     fruit_data =  my_cur.fetchall()
+    my_cnx.close()
     return fruit_data
 
 def insert_row_snowflake(newfruit):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     my_cur = my_cnx.cursor()
     my_cur.execute("INSERT INTO pc_rivery_db.public.fruit_load_list(FRUIT_NAME) VALUES('" + newfruit + "')")
+    my_cnx.close()
     return "Thanks for adding " + newfruit
 
 #Add button to load the fruit
