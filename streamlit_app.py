@@ -62,6 +62,7 @@ def insert_row_snowflake(newfruit):
     return "Thanks for adding " + newfruit
 
 #Add button to load the fruit
+streamlit.header("View Our Fruit List - Add Your Favorites!")
 if streamlit.button('Get fruit load list'):
     streamlit.header("The fruit load list contains:")
     my_data_row = get_fruit_load_list()
