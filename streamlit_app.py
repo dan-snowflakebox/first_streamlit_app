@@ -55,7 +55,7 @@ def get_fruit_load_list():
     return my_data_row;
 
 #Add button to load the fruit
-if streamlit.button('Get fruit load list')
+if streamlit.button('Get fruit load list'):
     streamlit.header("The fruit load list contains:");
     my_data_row = get_fruit_load_list();
     streamlit.dataframe(my_data_row);
