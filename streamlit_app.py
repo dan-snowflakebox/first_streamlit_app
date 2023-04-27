@@ -48,6 +48,7 @@ except URLError as e:
 
 def get_fruit_load_list():
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    my_cur = my_cnx.cursor()
     my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
     fruit_data =  my_cur.fetchall()
     return fruit_data
