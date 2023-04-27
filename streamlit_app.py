@@ -2,7 +2,7 @@
 import streamlit
 import pandas
 import requests
-import snowflake.connector
+
 
 streamlit.title("My Mother New Healthy Dinner");
 streamlit.header("Breakfast Menu");
