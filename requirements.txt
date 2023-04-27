@@ -1,5 +1,4 @@
-# requirements.txt
-import snowflake-connector-phyton
+# requirements.txtm snowflake-connector-phyton
 import snowflake.connector
 
 
