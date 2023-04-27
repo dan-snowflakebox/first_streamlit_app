@@ -51,4 +51,6 @@ my_data_row = my_cur.fetchall();
 streamlit.header("The fruit load list contains:");
 streamlit.dataframe(my_data_row);
 
-streamlit.text_input("What fruit would you like to add?","");
+add_my_fruit = streamlit.text_input("What fruit would you like to add?","");
+
+my_cur.execute('INSERT INTO pc_rivery_db.public.fruit_load_list(FRUIT_NAME) VALUES('from streamlit');');
